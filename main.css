@@ -1,0 +1,13 @@
+.container {
+    margin: 2px;
+    font-size: larger;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 2px;
+}
+
+h2 {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
