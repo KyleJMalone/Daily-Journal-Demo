@@ -1,22 +1,24 @@
-.container {
-    margin: 2px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #68737C;
-    color: #eee8e7;
-    font-size: 32px;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 2px;
+
+div.card{
+    display: grid;
+    gap: 20px;
+    background-color: #EEEEEE;
+    border: #0F0E0E solid;
+    padding: auto;
+    margin: auto;
+
 }
+
+
 form {
-    color: #eee8e7;
-    background-color: #68737C;
+    color:#EEEEEE;
+    background-color:#0F0E0E ;
     font-family: Arial, Helvetica, sans-serif;
     font-size: larger;
 }
 h2 {
-    border:solid #eee8e7;
-    background-color: #68737C;
+    border:solid #EEEEEE ;
+    background-color:#0F0E0E ;
     color: #eee8e7;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 40px;
@@ -26,9 +28,6 @@ h2 {
 }
 
 body {
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-image:url(https://wallpapercave.com/wp/wp7185806.jpg)
+  background-color:#6A0F0F ;
+ 
 }
-
-
