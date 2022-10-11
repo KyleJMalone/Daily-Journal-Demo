@@ -15,11 +15,11 @@
                 <form class="entryForm">
                     <fieldset>
                         <label for="entryDate">Date</label>
-                        <input type="date" name="entryDate" class="entryForm__date">
+                        <input type="date" name="entryDate" id="entryDate" class="entryForm__date">
                         <label for="conceptsCovered">Concepts Covered</label>
-                        <input type="textArea" name="conceptsCovered" class="concepts">
+                        <input type="textArea" name="conceptsCovered" id="conceptsCovered" class="concepts">
                         <label for="journalEntry">Journal Entry</label>
-                        <input type="textArea" name="journalEntry" class="entryForm_journalEntry">
+                        <input type="textArea" name="journalEntry" id="journalEntry" class="entryForm_journalEntry">
                         <label for="mood">Current Mood</label>
                         <select name="currentMood" id="mood">
                             <option>Happy</option>
@@ -27,12 +27,12 @@
                             <option>Frustrated</option>
                             <option>Ok</option>
                         </select>
-                        <button>Record Journal Entry</button>  
+                        <button id="recordJournalEntry">Submit</button>
                     </fieldset>
                 </form>
                 <main class="Journal">
                     <div class="card">
-                       <section id="journalEntry"></section>
+                       <section id="journalEntry1"></section>
                       </div>
             </main>
         <footer> <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0vvXsWCC9xrXsKd4FyS8kM?utm_source=generator" width="100%" height="80" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe></footer>
