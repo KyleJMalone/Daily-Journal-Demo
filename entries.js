@@ -1,9 +1,22 @@
-import { fetchEntries } from "./dataAccess.js";
+const API =" http://localhost:8080"
 
-// const getNewEntryId = () => {
-//     let highestEntryId = journalEntries.sort((a, b) => b.id - a.id)[0].id;
-//     return highestEntryId + 1
-// }
+const applicationState ={
+    journalEntries: []
+}
+export const fetchJournalEntries = async () => {
+    const dataFetch = await fetch(`${API}/entries`)
+    const entries = await dataFetch.json()
+    applicationState.journalEntries=entries
+  };
+export const deletejournalEntries = async (id) => {
+   await fetch(`${API}/entries/${id}`,{method:"DELETE"})
+   document.dispatchEvent(new CustomEvent("stateChanged"))
+   
+}
+const getNewEntryId = () => {
+    let highestEntryId = applicationState.journalEntries.sort((a, b) => b.id - a.id)[0].id;
+    return highestEntryId + 1
+}
 
 // export const addNewJournalEntry =(newEntry) => {
 //     const newEntryId = getNewEntryId()
@@ -12,8 +25,8 @@ import { fetchEntries } from "./dataAccess.js";
 //     document.dispatchEvent(new CustomEvent("stateChanged"))
 // }
 
-export const getJournalEntries = async () => {
-    const copyOfEntries = await fetchEntries()
+export const getJournalEntries = () => {
+    const copyOfEntries = applicationState.journalEntries.map(entry => ({...entry}))
     return copyOfEntries
    
 
